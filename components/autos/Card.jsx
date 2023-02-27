@@ -27,6 +27,7 @@ export default function Card({ cars }) {
 						w="sm"
 						mx="auto">
 						<Box
+							cursor={"pointer"}
 							bg="gray.300"
 							h={64}
 							w="full"

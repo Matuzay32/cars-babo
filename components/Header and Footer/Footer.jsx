@@ -82,7 +82,7 @@ export default function Footer() {
 					<Redes
 						label={"WhatsApp"}
 						href={
-							"https://wa.me/573226544891?text=GENERAL_ENQUIRY"
+							"https://wa.me/5491168856073?text=GENERAL_ENQUIRY"
 						}>
 						<BsWhatsapp />
 					</Redes>
