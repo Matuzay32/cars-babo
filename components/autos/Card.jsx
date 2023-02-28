@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Box,
 	Text,
@@ -10,8 +10,27 @@ import {
 	useColorModeValue,
 } from "@chakra-ui/react";
 import { BsWhatsapp } from "react-icons/bs";
+import { useRouter } from "next/router";
+import { autos } from "./listaDeAutos";
 
-export default function Card({ cars }) {
+export default function Card() {
+	const [cars, setCars] = useState(autos);
+	const enviaPaginaDewhatsApp = (
+		phoneNumber = "5491168856073",
+		message = "Hola, quiero hacer una consulta"
+	) => {
+		const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+			message
+		)}`;
+		window.open(url);
+	};
+
+	const router = useRouter();
+
+	function getCars() {
+		return cars;
+	}
+
 	return (
 		<>
 			{cars.map((car) => (
@@ -38,6 +57,9 @@ export default function Card({ cars }) {
 							bgPos="center"
 							style={{
 								backgroundImage: `url(${car?.image})`,
+							}}
+							onClick={() => {
+								router.push(`/${car.id}`);
 							}}></Box>
 
 						<Box
@@ -103,7 +125,10 @@ export default function Card({ cars }) {
 												bg: "gray.600",
 											},
 											outline: "none",
-										}}>
+										}}
+										onClick={() =>
+											enviaPaginaDewhatsApp()
+										}>
 										Consultar
 									</Button>
 								</Flex>
@@ -128,7 +153,7 @@ export default function Card({ cars }) {
 										_dark={{
 											color: "gray.200",
 										}}>
-										2015
+										{car.year}
 									</chakra.span>
 								</Flex>
 
