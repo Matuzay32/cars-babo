@@ -29,6 +29,12 @@ const colors = {
 	tecnologies: {
 		100: "RGBA(0, 0, 0, 0.08)",
 	},
+
+	transparencia: {
+		100: "RGBA(255, 255, 255, 0.5)",
+
+		200: "RGBA(0, 0, 0, 0.2)",
+	},
 };
 
 export const tema = extendTheme({ colors });

@@ -42,7 +42,11 @@ const Hero = () => {
 						"0 4px 6px rgba(160, 174, 192, 0.6)",
 						"0 4px 6px rgba(9, 17, 28, 0.9)"
 					)}
-					bg={useColorModeValue("white", "gray.800")}
+					bg={useColorModeValue(
+						"transparencia.100",
+						"gray.800"
+					)}
+					backdropFilter={"blur(5px)"}
 					p={{ base: 4, sm: 8 }}
 					overflow="hidden"
 					rounded="2xl">
