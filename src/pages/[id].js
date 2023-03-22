@@ -20,18 +20,21 @@ import IndividualCar from "components/autos/IndividualCar";
 export default function id() {
 	const router = useRouter();
 	const { id } = router.query;
+	const [auto, setAuto] = useState([]);
+
 	const [arrayFotos, setArrayFotos] = useState(
 		autos?.find((car) => car.id === parseInt(id))
 			?.image || []
 	);
 
-	console.log(arrayFotos);
 	useEffect(() => {
 		if (id) {
 			const car = autos.find(
 				(car) => car.id === parseInt(id)
 			);
 			setArrayFotos(car?.image);
+
+			setAuto(car);
 		}
 
 		return () => {};
@@ -54,7 +57,7 @@ export default function id() {
 
 	return (
 		<Contenedor>
-			<IndividualCar></IndividualCar>
+			<IndividualCar auto={auto}></IndividualCar>
 			{/* Carru */}
 			<Box
 				maxW={{

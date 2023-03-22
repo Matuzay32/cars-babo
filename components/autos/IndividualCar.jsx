@@ -12,7 +12,7 @@ import {
 	TextProps,
 } from "@chakra-ui/react";
 
-const MissionSection = () => {
+const MissionSection = ({ auto }) => {
 	return (
 		<Container maxW="6xl" px={{ base: 6, md: 3 }} py={14}>
 			<Stack
@@ -30,21 +30,11 @@ const MissionSection = () => {
 						lineHeight={1}
 						fontWeight="bold"
 						textAlign="left">
-						AMAROK
+						{auto?.name}
 					</chakra.h1>
 					<Box>
-						<Content>
-							Building products is hard. We've built
-							our fair share and we've noticed the
-							problems you always run into.
-						</Content>
+						<Content>{auto?.description}</Content>
 					</Box>
-					<Link
-						href="#"
-						fontSize="sm"
-						color="blue.400">
-						See how people are using our components →
-					</Link>
 				</Stack>
 			</Stack>
 		</Container>

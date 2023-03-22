@@ -25,13 +25,13 @@ const features = [
 	{
 		title: "Financiación",
 		detail:
-			"ofrecemos financiación para la compra de tu auto. Además, garantizamos un servicio post venta y seguimiento. Queremos brindar un servicio completo y de calidad para que puedas disfrutar de tu auto sin preocupaciones.",
+			"Ofrecemos financiación para la compra de tu auto. Además, garantizamos un servicio post venta y seguimiento. Queremos brindar un servicio completo y de calidad para que puedas disfrutar de tu auto sin preocupaciones.",
 		icon: <GiMoneyStack></GiMoneyStack>,
 	},
 	{
 		title: "Gestión ágil y eficiente",
 		detail:
-			"nos enfocamos en una gestión ágil y eficiente del papeleo para que puedas disfrutar de tu auto lo más pronto posible. Nos aseguramos de que la documentación esté completa y correcta para evitar retrasos innecesarios.Queremos que tu experiencia de compra sea lo más fácil y agradable posible.",
+			"Nos enfocamos en una gestión ágil y eficiente del papeleo para que puedas disfrutar de tu auto lo más pronto posible. Nos aseguramos de que la documentación esté completa y correcta para evitar retrasos innecesarios.Queremos que tu experiencia de compra sea lo más fácil y agradable posible.",
 		icon: <BsClock />,
 	},
 ];
