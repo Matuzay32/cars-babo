@@ -30,10 +30,12 @@ const MissionSection = ({ auto }) => {
 						lineHeight={1}
 						fontWeight="bold"
 						textAlign="left">
-						{auto?.name}
+						{auto?.auto_name}
 					</chakra.h1>
 					<Box>
-						<Content>{auto?.description}</Content>
+						<Content>
+							{auto?.auto_description}
+						</Content>
 					</Box>
 				</Stack>
 			</Stack>

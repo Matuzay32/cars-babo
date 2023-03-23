@@ -23,16 +23,16 @@ export default function id() {
 	const [auto, setAuto] = useState([]);
 
 	const [arrayFotos, setArrayFotos] = useState(
-		autos?.find((car) => car.id === parseInt(id))
-			?.image || []
+		autos?.find((car) => car.auto_id === parseInt(id))
+			?.image_url || []
 	);
 
 	useEffect(() => {
 		if (id) {
 			const car = autos.find(
-				(car) => car.id === parseInt(id)
+				(car) => car.auto_id === parseInt(id)
 			);
-			setArrayFotos(car?.image);
+			setArrayFotos(car?.image_url);
 
 			setAuto(car);
 		}

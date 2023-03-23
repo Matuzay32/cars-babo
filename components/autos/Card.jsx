@@ -35,7 +35,7 @@ export default function Card() {
 		<>
 			{cars.map((car) => (
 				<Flex
-					key={car.id}
+					key={car.auto_id}
 					p={50}
 					w="full"
 					alignItems="center"
@@ -56,10 +56,10 @@ export default function Card() {
 							bgSize="cover"
 							bgPos="center"
 							style={{
-								backgroundImage: `url(${car?.image})`,
+								backgroundImage: `url(${car?.image_url[0]})`,
 							}}
 							onClick={() => {
-								router.push(`/${car.id}`);
+								router.push(`/${car.auto_id}`);
 							}}></Box>
 
 						<Box
@@ -86,7 +86,7 @@ export default function Card() {
 									color: "white",
 								}}
 								letterSpacing={1}>
-								{car.name}
+								{car.auto_name}
 							</chakra.h3>
 							<Box
 								backdropFilter={"blur(4px)"}
@@ -153,7 +153,7 @@ export default function Card() {
 										_dark={{
 											color: "gray.200",
 										}}>
-										{car.year}
+										{car.auto_year}
 									</chakra.span>
 								</Flex>
 
